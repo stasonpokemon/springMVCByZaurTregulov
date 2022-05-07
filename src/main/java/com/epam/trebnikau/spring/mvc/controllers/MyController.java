@@ -21,8 +21,7 @@ public class MyController {
     }
 
     @RequestMapping("/showDetails")
-    public String showEmployeeDetails(HttpServletRequest request, Model model){
-        String employeeName = request.getParameter("employeeName");
+    public String showEmployeeDetails(@RequestParam("employeeName") String employeeName, Model model){
         employeeName = "Mr. " + employeeName;
         model.addAttribute("employeeName",employeeName);
         return "show-emp-det";
