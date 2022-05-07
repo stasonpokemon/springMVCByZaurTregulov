@@ -15,6 +15,6 @@
 <br>
 <br>
 <br>
-Your name: ${param.employeeName}
+Your name: ${employeeName}
 </body>
 </html>
