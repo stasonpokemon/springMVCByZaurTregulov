@@ -12,6 +12,6 @@
 </head>
 <body>
     <h2>Hello! It's my first view file in this project!</h2>
-    <a href="/askDetails">Enter</a>
+    <a href="/employee/askDetails">Enter</a>
 </body>
 </html>
