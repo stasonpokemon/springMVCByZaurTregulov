@@ -23,7 +23,15 @@
     <br><br>
     salary: <form:input path="salary"/>
     <br><br>
-    department <form:input path="department"/>
+    department <form:select path="department">
+    <form:option value="Information Tecgnology" label="IT"/>
+    <form:option value="Human Resources" label="HR"/>
+    <form:option value="Sales" label="Sales"/>
+    </form:select>
+    <br><br>
+    english level <form:select path="englishLevel">
+    <form:options items="${employee.englishLevels}"/>
+    </form:select>
     <br><br>
     <input type="submit" value="OK">
 </form:form>
