@@ -1,4 +1,6 @@
-package com.epam.trebnikau.spring.mvc.controllers.entitys;
+package com.epam.trebnikau.spring.mvc.entitys;
+
+import com.epam.trebnikau.spring.mvc.validation.CheckEmailAnnotation;
 
 import javax.validation.constraints.*;
 import java.util.HashMap;
@@ -26,6 +28,8 @@ public class Employee {
     private Map<String, String> possiblePlacesOfWorkMap;
     @Pattern(regexp = "\\d{2}-\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XX-XXX-XX-XX")
     private String phoneNumber;
+    @CheckEmailAnnotation(value = "epam.com", message = "email must ends with epam.com")
+    private String email;
 
 
 
@@ -157,6 +161,14 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -169,6 +181,7 @@ public class Employee {
                 ", operating system='" + operatingSystem + '\'' +
                 ", possible places of work='" + possiblePlacesOfWork+ '\'' +
                 ", phone number='" + phoneNumber+ '\'' +
+                ", email='" + email+ '\'' +
                 '}';
     }
 }

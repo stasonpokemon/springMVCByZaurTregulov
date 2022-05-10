@@ -52,8 +52,11 @@
     Possible place(s) of work:
     <form:checkboxes path="possiblePlacesOfWork" items="${employee.possiblePlacesOfWorkMap}"/>
     <br><br>
-    phone number: <form:input path="phoneNumber"/>
+    Phone number: <form:input path="phoneNumber"/>
     <form:errors path="phoneNumber"/>
+    <br><br>
+    Email: <form:input path="email"/>
+    <form:errors path="email"/>
     <br><br>
     <input type="submit" value="OK">
 </form:form>
