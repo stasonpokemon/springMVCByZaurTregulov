@@ -1,11 +1,19 @@
 package com.epam.trebnikau.spring.mvc.controllers.entitys;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
 
+    @Size(min = 2, message = "Name must be more than 2 characters")
+    @NotBlank(message = "name is required field")
     private String name;
+    @Size(min = 2, message = "Surname must be more than 2 characters")
+    @NotEmpty(message = "surname is required field")
     private String surname;
     private int salary;
     private String department;
