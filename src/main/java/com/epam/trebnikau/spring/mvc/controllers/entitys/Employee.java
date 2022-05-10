@@ -14,6 +14,10 @@ public class Employee {
     private String carBrand;
     private String operatingSystem;
     private Map<String, String> operatingSystems;
+    private String[] languages;
+    private String[] possiblePlacesOfWork;
+    private Map<String, String> possiblePlacesOfWorkMap;
+
 
 
     public Employee() {
@@ -28,7 +32,9 @@ public class Employee {
         operatingSystems.put("Mac OS","Mac OS");
         operatingSystems.put("Linux","Linux");
         operatingSystems.put("Windows","Windows");
-
+        possiblePlacesOfWorkMap = new HashMap<>();
+        possiblePlacesOfWorkMap.put("At home","At home");
+        possiblePlacesOfWorkMap.put("In the office","In the office");
     }
 
     public Employee(String name, String surname, int salary, String department) {
@@ -110,6 +116,30 @@ public class Employee {
         this.operatingSystems = operatingSystems;
     }
 
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public String[] getPossiblePlacesOfWork() {
+        return possiblePlacesOfWork;
+    }
+
+    public void setPossiblePlacesOfWork(String[] possiblePlacesOfWork) {
+        this.possiblePlacesOfWork = possiblePlacesOfWork;
+    }
+
+    public Map<String, String> getPossiblePlacesOfWorkMap() {
+        return possiblePlacesOfWorkMap;
+    }
+
+    public void setPossiblePlacesOfWorkMap(Map<String, String> possiblePlacesOfWorkMap) {
+        this.possiblePlacesOfWorkMap = possiblePlacesOfWorkMap;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -120,6 +150,7 @@ public class Employee {
                 ", englishLevel='" + englishLevel + '\'' +
                 ", car='" + carBrand + '\'' +
                 ", operating system='" + operatingSystem + '\'' +
+                ", possible places of work='" + possiblePlacesOfWork+ '\'' +
                 '}';
     }
 }

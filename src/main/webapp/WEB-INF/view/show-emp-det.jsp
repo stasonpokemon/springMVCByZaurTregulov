@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: a123
@@ -28,5 +29,18 @@ Your english level: ${employee.englishLevel}
 Your car: ${employee.carBrand}
 <br>
 Your operating system: ${employee.operatingSystem}
+<br>
+Your foreign language(s):
+<ul>
+    <c:forEach var="language" items="${employee.languages}">
+        <li>${language}</li>
+    </c:forEach>
+</ul>
+Your possible place(s) of work:
+<ul>
+    <c:forEach var="place" items="${employee.possiblePlacesOfWork}">
+        <li>${place}</li>
+    </c:forEach>
+</ul>
 </body>
 </html>

@@ -41,6 +41,14 @@
     What operating system do you have?
     <form:radiobuttons path="operatingSystem" items="${employee.operatingSystems}"/>
     <br><br>
+    Foreign language(s): 
+    <form:checkbox path="languages" value="English"/> ENG
+    <form:checkbox path="languages" value="Deutch"/> DE
+    <form:checkbox path="languages" value="French"/> FR
+    <br><br>
+    Possible place(s) of work:
+    <form:checkboxes path="possiblePlacesOfWork" items="${employee.possiblePlacesOfWorkMap}"/>
+    <br><br>
     <input type="submit" value="OK">
 </form:form>
 
