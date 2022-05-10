@@ -24,6 +24,7 @@
     <form:errors path="surname"/>
     <br><br>
     salary: <form:input path="salary"/>
+    <form:errors path="salary"/>
     <br><br>
     department <form:select path="department">
     <form:option value="Information Tecgnology" label="IT"/>
@@ -50,6 +51,9 @@
     <br><br>
     Possible place(s) of work:
     <form:checkboxes path="possiblePlacesOfWork" items="${employee.possiblePlacesOfWorkMap}"/>
+    <br><br>
+    phone number: <form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
     <br><br>
     <input type="submit" value="OK">
 </form:form>

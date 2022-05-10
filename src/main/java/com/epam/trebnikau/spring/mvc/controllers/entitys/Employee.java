@@ -1,9 +1,6 @@
 package com.epam.trebnikau.spring.mvc.controllers.entitys;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +12,8 @@ public class Employee {
     @Size(min = 2, message = "Surname must be more than 2 characters")
     @NotEmpty(message = "surname is required field")
     private String surname;
+    @Min(value = 500, message = "salary must be greater than 499")
+    @Max(value = 25000, message = "salary must be less than 25001")
     private int salary;
     private String department;
     private String englishLevel;
@@ -25,6 +24,8 @@ public class Employee {
     private String[] languages;
     private String[] possiblePlacesOfWork;
     private Map<String, String> possiblePlacesOfWorkMap;
+    @Pattern(regexp = "\\d{2}-\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XX-XXX-XX-XX")
+    private String phoneNumber;
 
 
 
@@ -148,6 +149,14 @@ public class Employee {
         this.possiblePlacesOfWorkMap = possiblePlacesOfWorkMap;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -159,6 +168,7 @@ public class Employee {
                 ", car='" + carBrand + '\'' +
                 ", operating system='" + operatingSystem + '\'' +
                 ", possible places of work='" + possiblePlacesOfWork+ '\'' +
+                ", phone number='" + phoneNumber+ '\'' +
                 '}';
     }
 }

@@ -42,5 +42,7 @@ Your possible place(s) of work:
         <li>${place}</li>
     </c:forEach>
 </ul>
+<br>
+Your phone number: ${employee.phoneNumber}
 </body>
 </html>
