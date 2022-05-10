@@ -11,15 +11,23 @@ public class Employee {
     private String department;
     private String englishLevel;
     private Map<String, String> englishLevels;
+    private String carBrand;
+    private String operatingSystem;
+    private Map<String, String> operatingSystems;
+
 
     public Employee() {
         englishLevels = new HashMap<>();
-            englishLevels.put("A1", "Beginner");
-            englishLevels.put("A2", "Pre-Intermediate");
-            englishLevels.put("B1", "Intermediate");
-            englishLevels.put("B2", "Upper-Intermediate");
-            englishLevels.put("C1", "Advance");
-            englishLevels.put("C2", "Proficiency");
+        englishLevels.put("A1", "Beginner");
+        englishLevels.put("A2", "Pre-Intermediate");
+        englishLevels.put("B1", "Intermediate");
+        englishLevels.put("B2", "Upper-Intermediate");
+        englishLevels.put("C1", "Advance");
+        englishLevels.put("C2", "Proficiency");
+        operatingSystems = new HashMap<>();
+        operatingSystems.put("Mac OS","Mac OS");
+        operatingSystems.put("Linux","Linux");
+        operatingSystems.put("Windows","Windows");
 
     }
 
@@ -78,6 +86,30 @@ public class Employee {
         this.englishLevel = englishLevel;
     }
 
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String getOperatingSystem() {
+        return operatingSystem;
+    }
+
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }
+
+    public Map<String, String> getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(Map<String, String> operatingSystems) {
+        this.operatingSystems = operatingSystems;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -86,6 +118,8 @@ public class Employee {
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
                 ", englishLevel='" + englishLevel + '\'' +
+                ", car='" + carBrand + '\'' +
+                ", operating system='" + operatingSystem + '\'' +
                 '}';
     }
 }

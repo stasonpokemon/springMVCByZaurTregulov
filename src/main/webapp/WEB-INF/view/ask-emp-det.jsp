@@ -33,6 +33,14 @@
     <form:options items="${employee.englishLevels}"/>
     </form:select>
     <br><br>
+    Which car do you want?
+    <form:radiobutton path="carBrand" value="BMW"/> BMW
+    <form:radiobutton path="carBrand" value="Audi"/> Audi
+    <form:radiobutton path="carBrand" value="Mercedes"/> Mercedes
+    <br><br>
+    What operating system do you have?
+    <form:radiobuttons path="operatingSystem" items="${employee.operatingSystems}"/>
+    <br><br>
     <input type="submit" value="OK">
 </form:form>
 

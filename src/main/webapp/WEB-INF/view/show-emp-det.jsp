@@ -24,5 +24,9 @@ Your salary: ${employee.salary}
 Your department: ${employee.department}
 <br>
 Your english level: ${employee.englishLevel}
+<br>
+Your car: ${employee.carBrand}
+<br>
+Your operating system: ${employee.operatingSystem}
 </body>
 </html>
